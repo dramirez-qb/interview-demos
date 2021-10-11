@@ -11,7 +11,7 @@ IFS=$'\n\t'
 
 IMAGE=$1
 SERVICE_NAME="full_app" # Just a name for the service
-CLEAN_IMAGE=${IMAGE//[^a-zA-Z0-9_-]/}
+CLEAN_IMAGE=${IMAGE//[^a-zA-Z0-9\_\-\.\/\:]/} # clean the user input
 
 
 function finish {
