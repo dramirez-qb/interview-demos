@@ -1,4 +1,4 @@
-# Quick Base Front End Craft Demo
+# Quickbase Front End Craft Demo
 
 ## General Description
 
@@ -25,7 +25,9 @@ already provides it.
 
 Your demo should run on whichever web browser you prefer.
 
-## Craft Demo Presentation Outline
+## Candidate Exercise Presentation Outline
+
+[optional] it is optional to use the presentation slide. You can jump right into the code as well.
 
 We have created a PowerPoint template which covers an outline of what we would
 like to talk about during the first section of your interview before you share
@@ -33,7 +35,7 @@ your craft demo. Feel free to use the template provided or make your own. For
 developers, we are more interested in your code than your PowerPoint skills, so
 plan your prep time accordingly.
 
-[PowerPoint Template and Craft Demo Outline](https://github.com/QuickBase/interview-demos/blob/master/ui/QuickBase_CraftDemo_PresentationTemplate.pptx)
+[PowerPoint Template and Craft Demo Outline](https://github.com/QuickBase/interview-demos/blob/master/ui/Quickbase_CandidateExercise_PresentationTemplate.pptx)
 
 When you show off your craft demo, we will ask you to show us how it works from
 a user's perspective (e.g., filling out the form and clicking "save"). After
@@ -58,7 +60,7 @@ approach XD problems.
 
 A User Experience (UX) designer has created the following image and requirements
 for the multiple choice editor you are building. It is a first draft. We are
-collaborative here at Quick Base and as a developer you can suggest alternatives
+collaborative here at Quickbase and as a developer you can suggest alternatives
 to the items below. We often have conversations between developers and UX
 designers about a spec before we go build it. Unfortunately, in this setup
 scenario, you can't talk with the UX designer so feel free to imagine you had
@@ -83,14 +85,18 @@ the conversation and make changes you think would be worthwhile.
    the form is submitted. This helps demonstrate the prior requirement (that the
    default value is added).
 1. Add a button that allows the builder to clear the form and start fresh.
-1. The submit button should create a json object and post it to
-   [http://www.mocky.io/v2/566061f21200008e3aabd919](http://www.mocky.io/v2/566061f21200008e3aabd919).
-   It should also log the post data to the console. You can add a function to
-   FieldService in
-   [MockFieldService.js](https://github.com/QuickBase/interview-demos/blob/master/ui/js/MockService.js)
-   to accomplish this, but everything is up to you. Feel free to modify or
-   change anything you would like as long as it meets the minimum requirement of
-   posting json data to the back-end endpoint.
+1. Generate a Mocky endpoint to use for this craft demo or alternatively use another service/method of your preference to achieve this.  Steps to generate a Mocky endpoint to post data to:
+    1. Navigate to [Mocky](https://designer.mocky.io/).
+    1. Click on "New Mock".
+    1. Add details about your API call here including a generic response.
+    1. Ensure "Never Expire" is checked at the bottom.
+    1. Click "Generate My HTTP Response" button at the bottom of the screen.
+    1. Copy the "Mock URL" that is provided.
+1. The submit button should create a json object and post it to the link that you 
+generated in the Mocky service above.  It should also log the post data to the console. 
+You can add a function to FieldService in [MockFieldService.js](https://github.com/QuickBase/interview-demos/blob/master/ui/js/MockService.js) to accomplish this, but everything is up 
+to you.  Feel free to modify or change anything you would like as long as it meets the 
+minimum requirement of posting json data to the back-end endpoint.
 
 ## Stretch Requirements / Tasks
 
@@ -98,6 +104,7 @@ These are bonus tasks to consider. Complete the core tasks before attempting one
 of these. You can also feel free to consider your own ideas for extension if you
 have time to complete additional requirements. These are only suggestions.
 
+* Add some unit tests using Jest, React testing library or similar
 * Allow the form to be responsive and work on mobile devices in addition to
   desktop.
 * Have you ever closed the browser accidentally when working on something? Yeah,
